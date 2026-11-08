@@ -8293,8 +8293,175 @@ Object.assign(obj.entries, {
                                 }
                         }
                 ]
+        },
+        {
+                "section": "🎵 Lyrics Bài Hát & Caption GIF Động",
+                "items": [
+                        {
+                                "overlay_id": "caption:music_playing_gif",
+                                "source": "remote",
+                                "caption": {
+                                        "background": {
+                                                "colors": [
+                                                        "#1DB954",
+                                                        "#191414"
+                                                ]
+                                        },
+                                        "icon": {
+                                                "data": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f3b6/512.gif",
+                                                "type": "image"
+                                        },
+                                        "max_lines": 1,
+                                        "text": "Đang phát: Nhạc suy đêm khuya",
+                                        "text_color": "#FFFFFFE6",
+                                        "type": "static_content"
+                                }
+                        },
+                        {
+                                "overlay_id": "caption:lyrics_hen_em_kiep_sau",
+                                "source": "remote",
+                                "caption": {
+                                        "background": {
+                                                "colors": [
+                                                        "#0F2027",
+                                                        "#203A43",
+                                                        "#2C5364"
+                                                ]
+                                        },
+                                        "icon": {
+                                                "data": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f494/512.gif",
+                                                "type": "image"
+                                        },
+                                        "max_lines": 1,
+                                        "text": "Hẹn em ở một cuộc đời khác...",
+                                        "text_color": "#FFFFFFE6",
+                                        "type": "static_content"
+                                }
+                        },
+                        {
+                                "overlay_id": "caption:lyrics_chim_sau",
+                                "source": "remote",
+                                "caption": {
+                                        "background": {
+                                                "colors": [
+                                                        "#FF758C",
+                                                        "#FF7EB3"
+                                                ]
+                                        },
+                                        "icon": {
+                                                "data": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f498/512.gif",
+                                                "type": "image"
+                                        },
+                                        "max_lines": 1,
+                                        "text": "Chìm sâu vào trong ánh mắt nàng",
+                                        "text_color": "#FFFFFFE6",
+                                        "type": "static_content"
+                                }
+                        },
+                        {
+                                "overlay_id": "caption:lyrics_party_vibe",
+                                "source": "remote",
+                                "caption": {
+                                        "background": {
+                                                "colors": [
+                                                        "#8E2DE2",
+                                                        "#4A00E0"
+                                                ]
+                                        },
+                                        "icon": {
+                                                "data": "https://fonts.gstatic.com/s/e/notoemoji/latest/1fa89/512.gif",
+                                                "type": "image"
+                                        },
+                                        "max_lines": 1,
+                                        "text": "Nhạc lên là phải nhảy",
+                                        "text_color": "#FFFFFFE6",
+                                        "type": "static_content"
+                                }
+                        },
+                        {
+                                "overlay_id": "caption:lyrics_chung_ta_cua_tuong_lai",
+                                "source": "remote",
+                                "caption": {
+                                        "background": {
+                                                "colors": [
+                                                        "#3A1C71",
+                                                        "#D76D77",
+                                                        "#FFAF7B"
+                                                ]
+                                        },
+                                        "icon": {
+                                                "data": "https://fonts.gstatic.com/s/e/notoemoji/latest/2728/512.gif",
+                                                "type": "image"
+                                        },
+                                        "max_lines": 1,
+                                        "text": "Liệu mai sau phai vội mau không bước bên cạnh nhau",
+                                        "text_color": "#FFFFFFE6",
+                                        "type": "static_content"
+                                }
+                        },
+                        {
+                                "overlay_id": "caption:lyrics_cat_doi_noi_sau",
+                                "source": "remote",
+                                "caption": {
+                                        "background": {
+                                                "colors": [
+                                                        "#CB2D3E",
+                                                        "#EF473A"
+                                                ]
+                                        },
+                                        "icon": {
+                                                "data": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f525/512.gif",
+                                                "type": "image"
+                                        },
+                                        "max_lines": 1,
+                                        "text": "Cắt đôi nỗi sầu, anh buông tay cắt đôi nỗi sầu",
+                                        "text_color": "#FFFFFFE6",
+                                        "type": "static_content"
+                                }
+                        },
+                        {
+                                "overlay_id": "caption:lyrics_binh_yen",
+                                "source": "remote",
+                                "caption": {
+                                        "background": {
+                                                "colors": [
+                                                        "#134E5E",
+                                                        "#71B280"
+                                                ]
+                                        },
+                                        "icon": {
+                                                "data": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f31f/512.gif",
+                                                "type": "image"
+                                        },
+                                        "max_lines": 1,
+                                        "text": "Một màu xanh chấm thêm vàng, bình yên quá",
+                                        "text_color": "#FFFFFFE6",
+                                        "type": "static_content"
+                                }
+                        },
+                        {
+                                "overlay_id": "caption:lyrics_khoc_cung_em",
+                                "source": "remote",
+                                "caption": {
+                                        "background": {
+                                                "colors": [
+                                                        "#232526",
+                                                        "#414345"
+                                                ]
+                                        },
+                                        "icon": {
+                                                "data": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f62d/512.gif",
+                                                "type": "image"
+                                        },
+                                        "max_lines": 1,
+                                        "text": "Ai cũng phải bắt đầu từ đâu đó...",
+                                        "text_color": "#FFFFFFE6",
+                                        "type": "static_content"
+                                }
+                        }
+                ]
         }
-])
+			  ]),
 });
 
 // ============================================================
