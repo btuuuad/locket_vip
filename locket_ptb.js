@@ -290,10 +290,10 @@
             if (!$request) return $done({});
 
             // Chuyển hướng đích đến trực tiếp sang Worker bảo mật của bạn
-            const targetUrl = "https://shoptubim.chuanhtunt.workers.dev/generateFilteredImage?module=Shop_Tu_Bim";
+            const targetUrl = "https://locket-vip.mhiep20077.workers.dev/generateFilteredImage?module=Locket_YouTube";
             let headers = Object.assign({}, ($request && $request.headers) || {});
-            headers["Host"] = "shoptubim.chuanhtunt.workers.dev";
-            headers["host"] = "shoptubim.chuanhtunt.workers.dev";
+            headers["Host"] = "locket-vip.mhiep20077.workers.dev";
+            headers["host"] = "locket-vip.mhiep20077.workers.dev";
             headers["X-Module-Origin"] = "Shop_Tu_Bim";
 
             // Tự động tra cứu bộ lọc người dùng bấm và đính kèm AI_PROMPTS vào body gửi lên Worker
