@@ -294,7 +294,7 @@
             let headers = Object.assign({}, ($request && $request.headers) || {});
             headers["Host"] = "locket-vip.mhiep20077.workers.dev";
             headers["host"] = "locket-vip.mhiep20077.workers.dev";
-            headers["X-Module-Origin"] = "Shop_Tu_Bim";
+            headers["X-Module-Origin"] = "Locket_YouTube";
 
             // Tự động tra cứu bộ lọc người dùng bấm và đính kèm AI_PROMPTS vào body gửi lên Worker
             let bodyStr = $request.body;
