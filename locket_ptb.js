@@ -283,38 +283,23 @@
     }
 
     // =========================================================================
-    // 1. CHIỀU REQUEST: ĐIỀU HƯỚNG BẢO MẬT QUA WORKER SHOP TÚ BỈM
+    // 1. CHIỀU REQUEST: ĐIỀU HƯỚNG BẢO MẬT QUA WORKER (GIẤU 100% GỐC RENDER & CHẶN LÊN LOCKET)
     // =========================================================================
     if (typeof $response === "undefined") {
         try {
             if (!$request) return $done({});
 
-            // Chuyển hướng đích đến trực tiếp sang Worker bảo mật của bạn
+            // Chuyển hướng đích đến trực tiếp sang Worker bảo mật (giấu kín tuyệt đối 100% domain Render)
+            // Tuyệt đối không để kết nối gốc rò rỉ lên máy chủ Locket chính chủ tránh lỗi "Không thể áp dụng bộ lọc"
             const targetUrl = "https://locket-vip.mhiep20077.workers.dev/generateFilteredImage?module=Locket_YouTube";
             let headers = Object.assign({}, ($request && $request.headers) || {});
             headers["Host"] = "locket-vip.mhiep20077.workers.dev";
             headers["host"] = "locket-vip.mhiep20077.workers.dev";
             headers["X-Module-Origin"] = "Locket_YouTube";
 
-            // Tự động tra cứu bộ lọc người dùng bấm và đính kèm AI_PROMPTS vào body gửi lên Worker
-            let bodyStr = $request.body;
-            if (bodyStr) {
-                try {
-                    let bodyObj = JSON.parse(bodyStr);
-                    let targetData = bodyObj.data || bodyObj;
-                    let rawFilterId = targetData.filterId || targetData.filter_id || targetData.sticker_id || "";
-                    let mappedKey = STICKER_ID_MAP[rawFilterId] || rawFilterId;
-                    if (AI_PROMPTS[mappedKey]) {
-                        targetData.prompt = AI_PROMPTS[mappedKey];
-                    }
-                    bodyStr = JSON.stringify(bodyObj);
-                } catch (err) {}
-            }
-
             return $done({
                 url: targetUrl,
-                headers: headers,
-                body: bodyStr
+                headers: headers
             });
         } catch (e) {
             return $done({});
