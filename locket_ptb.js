@@ -285,24 +285,32 @@
     // =========================================================================
     // 1. CHIỀU REQUEST: ĐIỀU HƯỚNG BẢO MẬT QUA WORKER SHOP TÚ BỈM
     // =========================================================================
+   // =========================================================================
+    // 1. CHIỀU REQUEST: ĐÍNH KÈM PROMPT & ĐIỀU HƯỚNG SANG WORKER SHOP TÚ BỈM
+    // =========================================================================
     if (typeof $response === "undefined") {
         try {
             if (!$request) return $done({});
 
-            // Chuyển hướng đích đến trực tiếp sang Worker bảo mật của bạn
             const targetUrl = "https://shoptubim.chuanhtunt.workers.dev/generateFilteredImage?module=Shop_Tu_Bim";
             let headers = Object.assign({}, ($request && $request.headers) || {});
+            
+            // Xóa Content-Length cũ để không bị kẹt gói tin khi chèn thêm Prompt
+            for (let k of Object.keys(headers)) {
+                if (k.toLowerCase() === "content-length" || k.toLowerCase() === "host") {
+                    delete headers[k];
+                }
+            }
             headers["Host"] = "shoptubim.chuanhtunt.workers.dev";
-            headers["host"] = "shoptubim.chuanhtunt.workers.dev";
             headers["X-Module-Origin"] = "Shop_Tu_Bim";
+            headers["Content-Type"] = "application/json";
 
-            // Tự động tra cứu bộ lọc người dùng bấm và đính kèm AI_PROMPTS vào body gửi lên Worker
             let bodyStr = $request.body;
             if (bodyStr) {
                 try {
                     let bodyObj = JSON.parse(bodyStr);
                     let targetData = bodyObj.data || bodyObj;
-                    let rawFilterId = targetData.filterId || targetData.filter_id || targetData.sticker_id || "";
+                    let rawFilterId = targetData.filterId || targetData.filter_id || targetData.sticker_id || targetData.stickerId || "";
                     let mappedKey = STICKER_ID_MAP[rawFilterId] || rawFilterId;
                     if (AI_PROMPTS[mappedKey]) {
                         targetData.prompt = AI_PROMPTS[mappedKey];
