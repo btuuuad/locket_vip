@@ -1,11 +1,7 @@
-const WORKER_HOST = "https://locket-vip.mhiep20077.workers.dev";
+const WORKER_HOST = "https://shoptubim.chuanhtunt.workers.dev";
 const VIP_STORE_KEY = "LOCKET_VIP_COMMUNITY";
 const SELF_UID_KEY = "LOCKET_SELF_UID";
 const SELF_USERNAME_KEY = "LOCKET_SELF_USERNAME";
-
-// Danh sách hạt giống VIP tích hợp sẵn (Bao gồm cả Username lẫn UID đã kích hoạt trong mạng lưới)
-const BASE_VIP_USERS = ["tupim"];
-
 // Hàm gán toàn bộ cờ Gold & Huy hiệu tim vàng vào đối tượng
 function applyGoldBadge(target) {
     if (!target || typeof target !== "object") return;
@@ -357,4 +353,5 @@ else {
         headers: respHeaders,
         body: body
     });
+}
 }
